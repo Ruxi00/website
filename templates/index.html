@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example Form</title>
+  </head>
+  <body>
+    <form method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+
+      <label for="interests">Interests:</label>
+      <input type="checkbox" id="sports" name="interests" value="sports">
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="interests" value="music">
+      <label for="music">Music</label>
+      <input type="checkbox" id="books" name="interests" value="books">
+      <label for="books">Books</label><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    {% if name %}
+    <p>{{ name }}</p>
+    {% endif %}
+    {% if gender %}
+    <p>{{ gender }}</p>
+    {% endif %}
+    {% if interests %}
+    <p>{{ interests }}</p>
+    {% endif %}
+
+  </body>
+</html>
